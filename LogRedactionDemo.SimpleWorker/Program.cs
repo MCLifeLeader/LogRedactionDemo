@@ -52,9 +52,9 @@ public class Worker : BackgroundService
     }
 }
 
-public class User
+public record User
 {
-    public User(string Id, string Name, string Email, InnerUserData innerData)
+    public User(string Id, [PersonalData] string Name, [PersonalData] string Email, InnerUserData innerData)
     {
         this.Id = Id;
         this.Name = Name;
@@ -83,7 +83,7 @@ public record InnerUserData
 // logging code that logs the user
 public static partial class Log
 {
-    [LoggerMessage(LogLevel.Information, "User {User} logged in")]
+    [LoggerMessage(LogLevel.Information, "User logged in")]
     public static partial void UserLoggedIn(this ILogger logger, [LogProperties] User user);
 }
 
