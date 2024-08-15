@@ -43,7 +43,7 @@ public class Worker : BackgroundService
         {
             if (_logger.IsEnabled(LogLevel.Information))
             {
-                // Redacts the Name and Email properties of the User object, but not the InnerData property's RedactedData property
+                // Redacts the Name and Email properties of the User object, but not the InnerData property's RedactedData property, unless Transitive = true is set
                 _logger.UserLoggedIn(new User("abcd", "Charles", "charles.mingus@bluenote.com", new InnerUserData()));
             }
 
