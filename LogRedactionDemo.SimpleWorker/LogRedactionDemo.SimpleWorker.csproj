@@ -11,6 +11,6 @@
         <PackageReference Include="Microsoft.Extensions.Compliance.Redaction" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0"/>
         <PackageReference Include="Microsoft.Extensions.Telemetry" Version="8.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Telemetry.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Telemetry.Abstractions" Version="8.1.0" />
     </ItemGroup>
 </Project>
