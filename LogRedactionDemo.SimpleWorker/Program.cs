@@ -84,7 +84,9 @@ public record InnerUserData
 public static partial class Log
 {
     [LoggerMessage(LogLevel.Information, "User logged in")]
-    public static partial void UserLoggedIn(this ILogger logger, [LogProperties] User user);
+#pragma warning disable EXTEXP0003 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+    public static partial void UserLoggedIn(this ILogger logger, [LogProperties(Transitive = true)] User user);
+#pragma warning restore EXTEXP0003 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 }
 
 public class PersonalDataAttribute : DataClassificationAttribute
